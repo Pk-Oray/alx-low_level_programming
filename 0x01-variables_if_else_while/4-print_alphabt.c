@@ -1,18 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers from 0 to 9.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+    char letter = 'a';
 
-	for (i = 0; i < 10; i++)
-	{
-		printf("%d", i);
-	}
-	putchar('\n');
-	return (0);
+    while (letter <= 'z')
+    {
+        if (letter != 'e' && letter != 'q')
+        {
+            putchar(letter);
+        }
+        letter++;
+    }
+    putchar('\n');
+    return (0);
 }
