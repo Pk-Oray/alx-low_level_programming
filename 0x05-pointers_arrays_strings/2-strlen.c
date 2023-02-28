@@ -4,14 +4,10 @@
  * @s: string
  * Return: length
  */
-int _strlen(char *s)
+size_t _strlen(const char *str)
 {
-	int longi = 0;
-	while (*s != '\0')
-	{
-		longi++;
-		s++;
-	}
-
-	return (longi);
+	size_t lenght = 0;
+	while (*str++)
+		lenght++;
+	return (lenght);
 }
