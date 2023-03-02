@@ -6,15 +6,22 @@
  * @n: The maximum number of bytes to concatenate from src.
  * Return: A pointer to the resulting string dest.
  */
-char *_strncat(char *dest, const char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int dest_len = 0, i;
+	int count = 0, count2 = 0;
 
-	while (dest[dest_len] != '\0')
+	while (*(dest + count) != '\0')
+	{
+		count++;
+	}
 
-	dest_len++;
-	for (i = 0; i < n && src[i] != '\0'; i++)
-	dest[dest_len + i] = src[i];
-	dest[dest_len + i] = '\0';
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
 	return (dest);
 }
